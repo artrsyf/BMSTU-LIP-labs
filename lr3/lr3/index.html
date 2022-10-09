@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>LR3</title>
+	<meta http-equiv="content type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<script type="text/javascript" src="js/scripts.js"></script>
+</head>
+<body>
+	<h1>LR3</h1>
+	<div class="container">
+
+		<div class="row">
+			<div class="col-4">
+				<form action="#" method="get" enctype="multipart/form-data"></form>
+				<table class="spaceTable" border="0" width="100%">
+					<tr><td><div class="form-group"><span class="formText">Login: </span><input class="form-control" placeholder="Input your login..." type="text" name="login" value=""></div></td></tr>
+
+					<tr><td><div class="form-group"><span class="formText">Password: </span><input class="form-control" placeholder="Input your password..." type="password" name="pass" value=""></div></td></tr>
+
+					<tr><td><span class="formText">Your gender: </span></td></tr>
+
+					<tr><td><div class="form-check form-check-inline">
+							<input class="form-check-input" type="radio" name="gender" value="male" id="radio1">
+							<label class="form-check-label" for="radio1"><span class="formText">M</span></label>
+						</div>
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="radio" name="gender" value="female" id="radio2">
+							<label class="form-check-label" for="radio2"><span class="formText">Ж</span></label>
+						</div>
+					</td></tr>
+
+					<tr><td><span class="formText">Have you ever worked with something?</span></td></tr>
+
+					<tr><td><div class="form-check"><input class="form-check-input" type="checkbox" name="documentation">
+                                                    <label class="form-check-label"><span class="formText">Documentation</span></label>
+                            </div>
+
+                            <div class="form-check"><input class="form-check-input" type="checkbox" name="book">
+                                <label class="form-check-label"><span class="formText">Literature</span></label>                            
+                            </div>
+                            <div class="form-check"><input class="form-check-input" type="checkbox" name="else">
+                                <label class="form-check-label"><span class="formText">Something else</span></label>                            
+                            </div>
+                    </td></tr>
+
+					<tr><td><div class="form-group"><span class="formText">Your resume: </span><input class="form-control" type="file" name="resume"></div></td></tr>
+
+					<tr><td><div class="form-group"><span class="formText">Let us know about you: </span><textarea class="form-control" name="text"></textarea></div></td></tr>
+
+					<tr><td><div class="form-group"><span class="formText">Choose relevant: <span><select class="form-control" name="color" id=""><option value="full-time"><span class="formText">Full-time work</span></option><option value="part-time"><span class="formText">Part-time work</span></option></select></div></td></tr>
+
+					<tr><td><div class="col "><button class="btn btn-primary mb-2" type="submit"><span class="formText">Send</span></button> <button class="btn btn-primary mb-2" type="reset"><span class="formText">Reset form</span></button></div></td></tr>
+				</table>
+			</div>
+			<div class="col-4 offset-1">
+				<table class="table table-dark table-bordered" width="50%" border="1">
+					<tr align="center">
+						<th colspan="8">Понедельник</th>
+					</tr>
+
+					<tr align="center">
+						<th colspan="2">1 пара</th> <th colspan="2">2 пара</th> <th colspan="2">3 пара</th> <th colspan="2">4 пара</th>
+					</tr>
+
+					<tr>
+						<td class="table-light">Мат. анализ</td> <td class="table-light">Социология</td> <td class="table-light">Основы программирования</td> <td class="table-light">Физика</td> <td class="table-light">Информатика</td> <td class="table-light">Ан. гем</td class="table-light"> <td class="table-light">ФКиС</td> <td class="table-light">-</td>
+					</tr>
+
+				</table>
+			</div>
+		</div>
+
+		
+	</div>
+
+	<div>
+		<script>
+			buildTree(document.documentElement);
+			//checkWrite(document.documentElement);
+			//generateTree(document.documentElement);
+		</script>
+	</div>
+
+
+</body>
+</html>
