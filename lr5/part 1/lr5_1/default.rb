@@ -1,7 +1,15 @@
 # frozen_string_literal: true
 
-x = gets.chomp.to_i
-y = gets.chomp.to_i
-a = 1 + (y - x).abs + ((y - x)**2).fdiv(2) + (y - x).abs**3.fdiv(3)
-puts(a)
-
+require_relative 'expression'
+puts 'Input first number: '
+first_string_number = Float(gets.chomp) rescue nil # v =~ /\A[-+]?[0-9]*\.?[0-9]+\Z/
+puts 'Input second number: '
+second_string_number = Float(gets.chomp) rescue nil
+if (first_string_number.is_a? Numeric) && (second_string_number.is_a? Numeric)
+  first_number = first_string_number.to_f
+  second_number = second_string_number.to_f
+  puts 'The answer is: '
+  puts Expression.new(arg1: first_number, arg2: second_number).solvation
+else
+  puts 'Incorrect input'
+end
