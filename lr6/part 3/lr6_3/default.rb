@@ -30,8 +30,7 @@ puts 'Input upper limit: '
 b = gets.chomp.to_i
 puts 'Input number of dividing (accuracy): '
 n = gets.chomp.to_i
-lambda_integrate = -> { integrate(n, a, b, :foo2) } # lambda
-puts integrate(n, a, b, :foo2) # function changing realised here
+lambda_integrate = -> { integrate(n, a, b, :foo1) } # lambda
+puts integrate(n, a, b, :foo1) # function changing realised here
 puts lambda_integrate.call # block
-output { puts integrate(n, a, b, :foo2) }
-
+output { puts integrate(n, a, b, :foo1) }

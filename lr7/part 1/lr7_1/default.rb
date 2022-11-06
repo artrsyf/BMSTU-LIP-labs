@@ -14,4 +14,3 @@ def write_in_file
 end
 
 write_in_file
-

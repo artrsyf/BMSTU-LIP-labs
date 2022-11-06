@@ -33,4 +33,3 @@ parent.print_expression
 child = BracketsThree.new(expression: '4 + 15')
 child.print_calculate
 child.print_expression
-
