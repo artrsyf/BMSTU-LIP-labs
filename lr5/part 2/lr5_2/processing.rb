@@ -18,18 +18,13 @@ class ArrayProcessing
     return 0 if array.empty?
 
     array.push('x')
-    prev_count = count = 1
-    (1..array.length - 1).each do |i|
-      if array[i] == array[i - 1] # { count += 1 } why doesn't work
-        count += 1
-      elsif count > prev_count
-        prev_count = count
-        count = 1
-      else
-        count = 1
-      end
+    count = 1
+    count_array = []
+    array.each_with_index do |_element, index|
+      array[index] == array[index - 1] ? count += 1 : count = 1
+      count_array.push(count)
     end
-    prev_count
+    count_array.max
   end
 
   def output

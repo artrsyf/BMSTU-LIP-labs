@@ -9,7 +9,8 @@ class Three
   end
 
   def return_calculate
-    "#{expression} = #{eval(expression)}"
+    b = binding
+    "#{expression} = #{b.eval(expression)}"
   end
 
   def return_expression
