@@ -58,4 +58,23 @@ RSpec.describe InTextFinder do
       end
     end
   end
+  describe '#find_similar' do
+    let(:example_object) { InTextFinder.new }
+    let(:first_string) { "Qwerty pog\n zxcvbn\p#{Faker::String.random}" }
+    let(:second_string) { "Qwerty pog\n zxcvbn\p#{Faker::String.random}" }
+    let(:result) { "Qwerty pog\n zxcvbn\p" }
+    let(:first_diff_string) { "q#{Faker::String.random}" }
+    let(:second_diff_string) { "z#{Faker::String.random}" }
+    let(:message) { 'Strings have nothing in common' }
+    context 'check how find_similar method works with random strings' do
+      it 'should return mutual part of both words' do
+        expect(example_object.find_similar(first_string, second_string)).to eq(result)
+      end
+    end
+    context 'check how find_similar method works with different random strings' do
+      it 'it should return message' do
+        expect(example_object.find_similar(first_diff_string, second_diff_string)).to eq(message)
+      end
+    end
+  end
 end

@@ -63,4 +63,12 @@ RSpec.describe BracketsThree do
       expect(example_object2.return_calculate).to eq(complex_equation)
     end
   end
+  context 'check is example_object object of Three or BracketsTree classes' do
+    it 'should return true is object is instance of class and false otherwise' do
+      example_object1 = Three.new(expression: '1 + 2')
+      example_object2 = BracketsThree.new(expression: '(1 + 2)')
+      expect(example_object1.class).to eq(Three)
+      expect(example_object2.class).to eq(BracketsThree)
+    end
+  end
 end

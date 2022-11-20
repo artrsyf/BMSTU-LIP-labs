@@ -1,22 +1,25 @@
+.globalwrapper, .form, .tablewrapper, .check{
+  border: 0px solid white !important;
+}
 .globalwrapper {
   display: flex;
-  border: 20px solid black;
+  border: 1px solid black;
   flex-direction: row;
   margin-top: 100px; }
 
 .form {
   margin-left: 200px;
-  border: 10px solid black; }
+  border: 1px solid black; }
 
 .tablewrapper {
   margin-left: 300px;
-  border: 10px solid black; }
+  border: 1px solid black; }
 
 .check {
   margin-left: auto;
   margin-right: 450px;
   float: right;
-  border: 10px solid brown; }
+  border: 1px solid brown; }
 
 .block {
   display: flex;
@@ -24,15 +27,14 @@
 
 .block_row {
   display: inline-flex;
-  border: 2px solid #ece89d; }
+  border: 1px solid #ece89d; }
 
 .block_column {
-  border: 2px solid #5e5373;
+  border: 1px solid #5e5373;
   flex-grow: 4; }
 
 .block_item {
-  background-color: #18b5a4;
-  padding: 25px;
+  padding: 0px;
   text-align: center;
   height: 35px; }
 
@@ -69,7 +71,9 @@ body {
   transition: 1s; }
 
 .resp-tab {
-  margin-left: 500px;
+  justify-content: center;
+  margin-top: 100px;
+  margin-left: 0px;
   border-radius: 5px;
   font-weight: normal;
   border: none;

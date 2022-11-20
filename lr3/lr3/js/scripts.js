@@ -15,21 +15,7 @@ function generateTree(elem) {
 function checkWrite(elem){
 	document.write(document.documentElement.tagName == "HTML");
 }
-// function buildTree(elem){
-// 	head = elem;
-// 	var ul = document.createElement('ul'); 
-// 	while(head) { // cycle working for every element in document
-//         var li = document.createElement('li'); // creating il in document
-//         li.innerHTML = head.tagName; // getting value in correct form to li;
-//         count += 1;
-//         var list = generateTree(head); //
-//         li.appendChild(list);
-//         ul.appendChild(li);
-//         head = head.nextElementSibling;
-//     }
-//     document.documentElement.appendChild(ul);
-//     return ul;
-// }
+
 var current = 1; // global variable for the only one entry into the condition
 function buildTree(elem) {
 	if (current == 1){

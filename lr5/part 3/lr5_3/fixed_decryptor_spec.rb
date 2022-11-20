@@ -93,7 +93,8 @@ RSpec.describe Decryptor do
         random_string_array = ['It is important to keep in mind', 'qwerty', 'zxc', 'vbn']
         example_object.default_word_matrix = rspec_matrix_maker(random_string_array)
         example_object.text_decryption
-        expect(example_object.text_decryption).to eq([%w[Xi xh xbedgipci id ztte xc bxcs], %w[fltgin], %w[omr], %w[kqc]])
+        expect(example_object.text_decryption)
+          .to eq([%w[Xi xh xbedgipci id ztte xc bxcs], %w[fltgin], %w[omr], %w[kqc]])
       end
     end
   end

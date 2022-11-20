@@ -29,9 +29,9 @@ RSpec.describe 'Integration' do
       it 'should integrate correctly' do
         example_lambda1 = ->(arg) { 8 + 2 * arg - arg**2 }
         example_lambda2 = ->(arg) { arg * Math.tan(arg)**2 }
-        expect((example_object.integrate_lambda(ACCURACY, -2, 4, example_lambda1) - ANSWER1).abs <
+        expect((example_object.integrate_lambda_proc(ACCURACY, -2, 4, example_lambda1) - ANSWER1).abs <
         1.fdiv(ACCURACY)).to eq(true)
-        expect((example_object.integrate_lambda(ACCURACY, 0, Math::PI.fdiv(4), example_lambda2) - ANSWER2).abs <
+        expect((example_object.integrate_lambda_proc(ACCURACY, 0, Math::PI.fdiv(4), example_lambda2) - ANSWER2).abs <
         1.fdiv(ACCURACY)).to eq(true)
       end
     end
@@ -48,9 +48,9 @@ RSpec.describe 'Integration' do
       it 'should integrate correctly' do
         example_proc1 = proc { |arg| 8 + 2 * arg - arg**2 }
         example_proc2 = proc { |arg| arg * Math.tan(arg)**2 }
-        expect((example_object.integrate_proc(ACCURACY, -2, 4, example_proc1) - ANSWER1).abs <
+        expect((example_object.integrate_lambda_proc(ACCURACY, -2, 4, example_proc1) - ANSWER1).abs <
         1.fdiv(ACCURACY)).to eq(true)
-        expect((example_object.integrate_proc(ACCURACY, 0, Math::PI.fdiv(4), example_proc2) - ANSWER2).abs <
+        expect((example_object.integrate_lambda_proc(ACCURACY, 0, Math::PI.fdiv(4), example_proc2) - ANSWER2).abs <
         1.fdiv(ACCURACY)).to eq(true)
       end
     end
