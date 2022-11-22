@@ -1,0 +1,15 @@
+<div id="result">
+    <table>
+        <tr>
+            <th>Number</th><th>Digit</th>
+        </tr>
+        <% @range.each_with_index do |element, index| %>
+            <% if @compare[index] %>
+                <tr>
+                    <td><%= index + 1 %></td><td><%= element %></td>
+                </tr>
+            <% end %> 
+        <% end %>
+    </table>
+    <%= link_to '<button>Back</button>'.html_safe, root_path %>
+</div>

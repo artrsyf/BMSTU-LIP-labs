@@ -1,0 +1,6 @@
+Metrics/BlockLength:
+  Enabled: true
+  AllowedMethods: ['describe', 'context']
+
+Style/EndOfLine:
+  EnforcedStyle: lf

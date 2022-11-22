@@ -4,7 +4,7 @@
     <%= msg %>
   </div>
 <% end %>
-<%= form_with url: "example/show", method: :get do |form| %>
+<%= form_with url: "solution/show", method: :post do |form| %>
   <%= form.label :query, "Find all happy elements. Input 0 <= n <= 999_999:" %>
   <%= form.text_field :input_number, placeholder: 'Input n'%>
   <%= form.submit "Find" %>
