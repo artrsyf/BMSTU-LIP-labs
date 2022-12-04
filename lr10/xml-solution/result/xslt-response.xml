@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="transform.xslt"?>
+<!-- url request: http://localhost:3000/?input_number=2000&format=xml -->
+<objects type="array">
+    <object>
+        <position type="integer">1</position>
+        <element type="integer">0</element>
+    </object>
+    <object>
+        <position type="integer">2</position>
+        <element type="integer">1001</element>
+    </object>
+    <object>
+        <position type="integer">3</position>
+        <element type="integer">1010</element>
+    </object>
+    <object>
+        <position type="integer">4</position>
+        <element type="integer">1100</element>
+    </object>
+</objects>

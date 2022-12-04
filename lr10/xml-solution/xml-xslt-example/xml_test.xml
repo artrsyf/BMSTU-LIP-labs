@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table type="container">
+  <row id="head">
+    <column feature="first" type="string">Number</column>
+    <column feature="second" type="string">Digit</column>
+  </row>
+  <row id="1">
+    <column feature="first" type="integer">1</column>
+    <column feature="second" type="integer">0</column>
+  </row>
+  <row id="2">
+    <column feature="first" type="integer">2</column>
+    <column feature="second" type="integer">1001</column>
+  </row>
+  <row id="3">
+    <column feature="first" type="integer">3</column>
+    <column feature="second" type="integer">1010</column>
+  </row>
+</table>
