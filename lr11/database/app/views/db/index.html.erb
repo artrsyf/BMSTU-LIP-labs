@@ -1,0 +1,15 @@
+<h1>Db#index</h1>
+
+<% flash.each do |type, msg| %>
+  <div id="error">
+    <%= msg %>
+  </div>
+<% end %>
+<%= form_with url: "db/show", method: :get do |form| %>
+  <%= form.label :query, "Find all happy elements. Input 0 <= n <= 999_999:" %>
+  <%= form.text_field :input_number, placeholder: 'Input n', id: 'input_number', value: 2000 %>
+  <%= form.submit "Find", id: 'find'%>
+<% end %>
+<%= form_with url: "db/render_db", id: 'db_form',method: :get do |form| %>
+  <%= form.submit id: 'db_button',value: "Show DB" %>
+<% end %>

@@ -1,0 +1,16 @@
+<h1>Db#show</h1>
+
+<%# total hash map from json%>
+<%= @result %>
+<br>
+<table id="solution_table">
+        <tr>
+            <th>Number</th><th>Digit</th>
+        </tr>
+        <% @result.each do |part| %>
+            <% element_tag = "<td class=element-#{part['position']}>#{part['element']}</td>" %>
+            <tr>
+                <td><%= part['position'] %></td><%= element_tag.html_safe %>
+            </tr>
+        <% end %>
+    </table>
