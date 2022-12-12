@@ -56,4 +56,16 @@ RSpec.describe 'Examples', type: :request do
       end
     end
   end
+  context 'check correct render in input action controller' do
+    it 'should return correct view - input' do
+      get root_path
+      expect(response).to render_template("example/input")
+    end
+  end
+  context 'check correct render in show action controller' do
+    it 'should return correct view - show' do
+      get '/example/show', params: { input_number: '12345' }
+      expect(response).to render_template("example/show")
+    end
+  end
 end

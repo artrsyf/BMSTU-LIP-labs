@@ -1,11 +1,12 @@
-<h1>Example#input</h1>
+<h1 id="examp">Example#input</h1>
 <% flash.each do |type, msg| %>
-  <div>
+  <div id="error">
     <%= msg %>
   </div>
 <% end %>
 <%= form_with url: "solution/show", method: :post do |form| %>
   <%= form.label :query, "Find all happy elements. Input 0 <= n <= 999_999:" %>
-  <%= form.text_field :input_number, placeholder: 'Input n'%>
-  <%= form.submit "Find" %>
+  <%= form.text_field :input_number, placeholder: 'Input n', id: 'input_number', value: 2000 %>
+  <%= form.submit "Find", id: 'find'%>
 <% end %>
+<div id="result"></div>

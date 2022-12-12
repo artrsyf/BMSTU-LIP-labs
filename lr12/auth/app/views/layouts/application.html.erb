@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Auth</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+    <%= link_to 'Log out', sessions_path, data: { turbo_method: :delete, turbo_confirm: 'Are you shure you want to log out?' } if !current_user.nil? %>
+    <% # condition is necessary? %>
+    <%= link_to 'Edit', edit_user_path(current_user) if !current_user.nil? %> 
+    <%= link_to 'Main', root_path if !current_user.nil? %>
+    <%= link_to 'Sign in', new_sessions_path if current_user.nil? %>
+    <br>
+    <% # link_to 'Log out', sessions_path, data: { turbo_method: :delete, turbo_confirm: 'Are you shure you want to log out?' } suddenly doesnt work %>
+    <%= current_user %>
+    <%= current_user.email if !current_user.nil? %>
+    <%= yield %>
+  </body>
+</html>

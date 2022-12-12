@@ -12,7 +12,14 @@
 
         <title>Result</title>
 
+        <style>
+          tr, td, th{
+            border: 1px solid black;
+          }
+        </style>
+
       </head>
+
 
       <body>
 
@@ -41,7 +48,7 @@
 
               <tr>
 
-                <td>
+                <td style="border: 2px dolid black">
                   <!--Извлекаем значение из переменной (обратите внимание на $)-->
                   <xsl:value-of select="$counter"></xsl:value-of>
                 </td>

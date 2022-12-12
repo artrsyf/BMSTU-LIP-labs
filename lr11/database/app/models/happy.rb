@@ -2,16 +2,10 @@
 
 # model realisation
 class Happy < ApplicationRecord
-  validates :input, format: { with: /\A\d+\z/, message: 'Incorrect input'}
-  validates_comparison_of :input, greater_than: 999_999
-  validates :input, presence: true # suddenly doesnt work
+  validates :input, length: { minimum: 1, message: 'Empty input' }
+  validates :input, format: { with: /\A\d+\z/, message: 'Incorrect input' }
+  before_save :set_output
 
-  def valid_check
-    return if input != 0
-    if input == 0
-      errors.add(:input, 'noth')
-    end
-  end
   def find_happy_numbers
     are_range_elements_happy = []
     range = (0..input.to_i).to_a
@@ -59,10 +53,16 @@ class Happy < ApplicationRecord
   end
 
   def json_encode
-    output = ActiveSupport::JSON.encode(find_happy_numbers)
+    ActiveSupport::JSON.encode(find_happy_numbers)
   end
 
   def json_decode
     ActiveSupport::JSON.decode(output)
+  end
+
+  private
+
+  def set_output
+    self.output = json_encode
   end
 end

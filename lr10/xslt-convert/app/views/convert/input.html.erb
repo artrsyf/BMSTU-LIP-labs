@@ -8,38 +8,38 @@
   <%= form.label :query, "Find all happy elements. Input 0 <= n <= 999_999:" %>
   <%= form.text_field :input_number, placeholder: 'Input n'%>
 
-  <fieldset class="form-group">
+  <fieldset>
 
       <legend>Выбор стороны рендеринга</legend>
 
-      <div class="form-check">
+      <div>
 
-        <label class="form-check-label">
+        <label>
 
-          <input type="radio" class="form-check-input" name="side" value="server" id="server-side" checked>
-          Рендеринг на стороне сервера этого приложения
-
-        </label>
-
-      </div>
-
-      <div class="form-check">
-
-        <label class="form-check-label">
-
-          <input type="radio" class="form-check-input" name="side" value="client" id="client-side">
-          Отображение сырого XML на стороне браузера
+          <input type="radio" name="side" value="server" id="server-side" checked>
+          Рендеринг на стороне сервера
 
         </label>
 
       </div>
 
-      <div class="form-check">
+      <div>
 
-        <label class="form-check-label">
+        <label>
 
-          <input type="radio" class="form-check-input" name="side" value="client-with-xslt" id="client-side-xslt">
-          Рендеринг на стороне браузера с помощью XSLT
+          <input type="radio" name="side" value="client" id="client-side">
+          Отображение чистого XML
+
+        </label>
+
+      </div>
+
+      <div>
+
+        <label>
+
+          <input type="radio" name="side" value="client-with-xslt" id="client-side-xslt">
+          Рендеринг на стороне браузера
 
         </label>
 

@@ -4,7 +4,7 @@
 class SolutionController < ApplicationController
   before_action :require_params, only: [:show]
 
-  def input() end
+  def input; end
 
   def show
     @range = (0..@number.to_i).to_a

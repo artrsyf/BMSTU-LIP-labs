@@ -3,12 +3,14 @@
     <tr>
         <th>Number</th><th>Digit</th>
     </tr>
+    <% count = 0 %>
     <% @range.each_with_index do |element, index| %>
         <% if @compare[index] %>
+            <% count += 1 %>
             <tr>
-                <td><%= index + 1 %></td><td><%= element %></td>
+                <td><%= count %></td><td><%= element %></td>
             </tr>
         <% end %> 
     <% end %>
 </table>
-<%= link_to '<button>Back</button>'.html_safe, root_path %>
+<%= button_to 'back', root_path, method: :get %>

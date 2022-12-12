@@ -1,0 +1,30 @@
+<%= form_with(model: @user) do |form| %>
+  <% flash.each do |type, msg| %>
+  <div id="error">
+    <%= msg %>
+  </div>
+  <% end %>
+  <% @user.errors.each do |error| %>
+        <% p error%>
+          <li><%= error.full_message%></li>
+        <% end %>
+
+  <div>
+    <%= form.label :email, value: 'Email',style: "display: block" %>
+    <%= form.text_field :email %>
+  </div>
+
+  <div>
+    <%= form.label :password, value: 'Password', style: "display: block" %>
+    <%= form.password_field :password %>
+  </div>
+
+  <div>
+    <%= form.label :lbl, value: 'Password confirmation', style: "display: block" %>
+    <%= form.password_field :password_confirmation %>
+  </div>
+
+  <div>
+    <%= form.submit (@user.new_record? ? 'Register' : 'Edit'), id: 'submit-btn'%>
+  </div>
+<% end %>
